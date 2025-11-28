@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아침 조회 실시간 자막 시스템</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="main-display">
+            <div class="status-indicator" id="statusIndicator">마이크 대기 중...</div>
+            <h1 id="koreanDisplay" class="korean-text">말씀해 주세요...</h1>
+        </header>
+        
+        <main class="translations-grid">
+            <div class="translation-card" data-lang="zh">
+                <span class="lang-label">중국어 (Chinese)</span>
+                <p class="trans-text" id="text-zh">...</p>
+            </div>
+            <div class="translation-card" data-lang="en">
+                <span class="lang-label">영어 (English)</span>
+                <p class="trans-text" id="text-en">...</p>
+            </div>
+            <div class="translation-card" data-lang="vi">
+                <span class="lang-label">베트남어 (Vietnamese)</span>
+                <p class="trans-text" id="text-vi">...</p>
+            </div>
+            <div class="translation-card" data-lang="ru">
+                <span class="lang-label">러시아어 (Russian)</span>
+                <p class="trans-text" id="text-ru">...</p>
+            </div>
+            <div class="translation-card" data-lang="uz">
+                <span class="lang-label">우즈벡어 (Uzbek)</span>
+                <p class="trans-text" id="text-uz">...</p>
+            </div>
+            <div class="translation-card" data-lang="km">
+                <span class="lang-label">캄보디아어 (Khmer)</span>
+                <p class="trans-text" id="text-km">...</p>
+            </div>
+            <div class="translation-card" data-lang="my">
+                <span class="lang-label">미얀마어 (Burmese)</span>
+                <p class="trans-text" id="text-my">...</p>
+            </div>
+        </main>
+
+        <div class="controls">
+            <button id="startBtn" class="btn primary">자막 시작</button>
+            <button id="stopBtn" class="btn secondary" disabled>중지</button>
+            <div class="api-key-container">
+                <input type="password" id="apiKeyInput" placeholder="Google Cloud API Key (Optional for Demo)">
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
